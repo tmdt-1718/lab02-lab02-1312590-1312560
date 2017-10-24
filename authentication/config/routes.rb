@@ -1,5 +1,20 @@
 Rails.application.routes.draw do
-  root 'topics#login'
+  # root "login#login"
+  root "message#listmessage"
+  # signup
+  get '/signup' => 'signup#signup'
+
+  # friend
+  get '/listfriend' => 'friend#listfriend'
+
+  # message
+  get '/listmessage' => 'message#listmessage'
+  get '/send' => 'message#sendd'
+  get '/sent' => 'message#sentt'
+
+  # login
+  get '/login' => 'login#login'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
